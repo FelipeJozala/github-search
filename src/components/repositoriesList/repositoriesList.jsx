@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useGithub from '../../hooks/useGithub';
+import NoRepositories from '../noRepositories/noRepositories';
 import RepositorieCard from '../repositorieCard/repositorieCard';
 import RepositoriesTabs from '../repositoriesTabs/repositoriesTabs';
 import {
@@ -35,14 +36,17 @@ function RepositoriesList() {
   return (
     <ListContainer>
       <RepositoriesTabs handleListToShow={handleListToShow} />
-      <RepositoriesGrid>
-        {reposList?.map((repositorie) => (
-          <RepositorieCard
-            key={repositorie.id}
-            repositorie={repositorie}
-          />
-        ))}
-      </RepositoriesGrid>
+      { reposList.length !== 0 ? (
+        <RepositoriesGrid>
+          {reposList?.map((repositorie) => (
+            <RepositorieCard
+              key={repositorie.id}
+              repositorie={repositorie}
+            />
+          ))}
+        </RepositoriesGrid>
+      )
+        : (<NoRepositories />)}
     </ListContainer>
   );
 }

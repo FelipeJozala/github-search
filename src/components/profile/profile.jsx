@@ -9,6 +9,7 @@ function Profile() {
   const { githubState } = useGithub();
   const { user } = githubState;
   return (
+
     <ProfileContainer>
       <ImgContainer>
         <Img src={user.avatar} alt="Github Avatar" />

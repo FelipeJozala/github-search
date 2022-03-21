@@ -3,6 +3,8 @@ import React, { createContext, useCallback, useState } from 'react';
 import githubApi from '../services/apiBaseURL';
 
 export const GithubContext = createContext({
+  hasError: false,
+  hasUser: false,
   loading: false,
   user: {},
   repositories: [],
@@ -12,6 +14,7 @@ export const GithubContext = createContext({
 // eslint-disable-next-line react/prop-types
 function GithubProvider({ children }) {
   const [githubState, setGithubState] = useState({
+    hasError: [],
     hasUser: false,
     loading: false,
     user: {
@@ -58,6 +61,11 @@ function GithubProvider({ children }) {
             public_gists: data.public_gists,
             public_repos: data.public_repos,
           },
+        }));
+      }).catch((err) => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          hasError: err,
         }));
       })
       .finally(() => {

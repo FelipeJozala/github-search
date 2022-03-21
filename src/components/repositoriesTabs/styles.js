@@ -1,3 +1,5 @@
+/* eslint-disable no-template-curly-in-string */
+/* eslint-disable no-shadow */
 import styled from 'styled-components';
 
 export const ListNavigation = styled.div`
@@ -24,12 +26,11 @@ export const ListSelector = styled.input`
   color: ${(props) => props.theme.colors.text.primary};
   background: none;
   font-size: 1.3rem;
-  border-bottom: ${(props) => (props.reposList === props.value ? '3px inset props.theme.colors.selected;' : 'none;')};
-
+  // eslint-disable-next-line no-template-curly-in-string
+  border-bottom: 3px inset  ${(props) => (props.isSelected === props.value ? props.theme.colors.selected : 'none;')};
 
   :hover{
     cursor: pointer;
-    padding-bottom: 2px;
-    border-bottom: 3px inset  ${(props) => props.theme.colors.selected};
+    border-bottom: 3px inset  ${(props) => (props.isSelected === props.value ? props.theme.colors.selected : props.theme.colors.text.links)};
   }
 `;
