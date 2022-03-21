@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   height: 150px;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   border: 0.1px solid ${(props) => props.theme.colors.text.primary};
   border-radius: 10px;
   padding: 20px;

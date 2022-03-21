@@ -41,7 +41,7 @@ export const ListSelector = styled.input`
 export const RepositoriesGrid = styled.div`
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: space-evenly;
+  gap: 30px 10px;
 `;
