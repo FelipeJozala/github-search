@@ -26,11 +26,6 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     color: ${(props) => props.theme.colors.text.primary};
   }
-
-  main {
-    padding-top: 3vh;
-    width: 100vw;
-  }
 `;
 
 export default GlobalStyles;

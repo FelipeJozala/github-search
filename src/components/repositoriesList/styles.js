@@ -44,4 +44,5 @@ export const RepositoriesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, 350px);
   justify-content: space-evenly;
   gap: 30px 10px;
+  margin-bottom: 20px;
 `;

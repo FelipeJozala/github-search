@@ -1,10 +1,17 @@
 import React from 'react';
+import NoSearchAnimation from '../../assets/animations/NoSearchAnimation.json';
+import { AnimationContainer, StyledLottie, Text } from './styles';
 
 function NoSearch() {
   return (
-    <div>
-      <p>Pesquise um usuário para começar!</p>
-    </div>
+    <AnimationContainer>
+      <Text>Pesquise um usuário para começar!</Text>
+      <StyledLottie
+        loop
+        animationData={NoSearchAnimation}
+        play
+      />
+    </AnimationContainer>
   );
 }
 

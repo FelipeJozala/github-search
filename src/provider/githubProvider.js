@@ -46,6 +46,7 @@ function GithubProvider({ children }) {
       .then(({ data }) => {
         setGithubState((prevState) => ({
           ...prevState,
+          hasError: [],
           hasUser: true,
           user: {
             id: data.id,
