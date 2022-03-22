@@ -8,8 +8,8 @@ import {
 function Profile() {
   const { githubState } = useGithub();
   const { user } = githubState;
-  return (
 
+  return (
     <ProfileContainer>
       <ImgContainer>
         <Img src={user.avatar} alt="Github Avatar" />

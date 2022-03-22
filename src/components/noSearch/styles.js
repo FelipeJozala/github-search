@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Lottie from 'react-lottie-player';
 
 export const AnimationContainer = styled.div`
+  text-align: center;
   height: 80vh;
   width: 100%;
   display: flex;
