@@ -13,7 +13,6 @@
 
 - [Sobre](#about)
 - [Instalação](#getting_started)
-- [Usage](#usage)
 - [Ferramentas](#tools)
 
 <br>
